@@ -5,14 +5,14 @@
  * Description: This plugin allows you to easily insert blocks into specific post areas.
  * Author: Small Plugins
  * Author URI: https://www.smallplugins.com/
- * Version: 1.0.5
+ * Version: 1.0.6
  * Requires at least: 5.8.3
  * Requires PHP: 5.7
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: automatic-block-inserter
  * Domain Path: /languages
- * Tested up to: 6.6
+ * Tested up to: 6.7
  *
  * @package AutomaticBlockInserter
  */

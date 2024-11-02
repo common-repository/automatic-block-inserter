@@ -1,73 +1,51 @@
 ## Automatic Block Inserter
 
-This plugin allows you to easily insert blocks into specific post areas as well as above or below specific block types.
+This plugin allows you to insert blocks into specific post areas as well as above or below specific block types. This plugin allows you to manage re-usable content in an organized way for your site. 
 
 ## Usage
 
 To get started with the Automatic Block Inserter plugin, follow these steps after installation:
 
-**Creating a New Automatic Block:**
+### 1️⃣ Creating a New Automatic Block
+
+![CleanShot 2024-05-10 at 21 42 47@2x](https://github.com/smallplugins/automatic-block-inserter/assets/48084051/74098a97-797f-4f15-9e02-bb87c068faec)
 
 1. In your WordPress dashboard, locate and click on the "Automatic Block" menu item.
 2. Click on "Add New" to create a new block.
-3. Enter the content for your block just like you would for a post or a page.
 
-**Configuring Block Settings:**
+### 2️⃣ Creating the content
 
-Once you've created the content for your block, you’ll see a control in the sidebar named **"Position."**
+You can simply create the block content by adding necessary blocks in the WordPress editor as you normally do for posts/pages.
 
-Here, you can configure where and how your block will be inserted:
+![CleanShot 2024-05-10 at 21 48 08@2x](https://github.com/smallplugins/automatic-block-inserter/assets/48084051/83a91c93-13c4-4ea6-8931-fbb8e5672d0d)
 
--   **Post Type**: Choose the type of content you want your block to be associated with (e.g., posts, pages).
--   **Location Type**: Select whether your block should be placed in a specific "post area" or next to a "block type."
--   **Position**: If you chose "post area," your block could be set to appear within the "post content." For "block type," you’ll get a dropdown menu listing all the available blocks where you can anchor your new block.
--   **Location**: Decide if your block should appear before or after the selected position.
--   **Offset**: This option is available when you select "block type" as your location type. It allows you to specify how many blocks away your new block should be placed from the chosen anchor block.
-    Insertion Logic and Display:
 
-The plugin uses the settings you've chosen to determine where to insert the block in your content.
-If you select "after" in the "Location" setting for a post area, for example, the block will appear immediately following the post content.
-If you set an offset with "block type," the plugin counts the specified number of blocks and places your new block accordingly.
-Previewing and Adjusting:
+### 3️⃣ Configuring block position
 
-You can preview your post or page to see how the block appears with the rest of your content.
-If the placement isn’t quite right, you can go back and adjust the settings as needed until you’re satisfied with the positioning.
-Multiple Blocks and Conditions:
+Once you've created the content for your block, you’ll see a control in the sidebar named **"Position"**. Let's configure our block to be displayed after the post content.
 
-The plugin allows you to create multiple blocks, each with its own set of conditions and placement settings.
-This means you can have different blocks appear in different contexts across your site, offering a high level of customization.
+https://github.com/smallplugins/automatic-block-inserter/assets/48084051/892eb768-af8e-4411-8746-f95071d361fd
 
-## Hooks and Filters
+💡 You can also display the block based on other block types. Here's a quick video showing how to configure your block to display after the **1st** core image block on the post.
 
-Automatic block inserter comes with hooks and filters that allows developers to do necessary changes smoothly.
+https://github.com/smallplugins/automatic-block-inserter/assets/48084051/bbc1fbf4-bc5f-442b-84bc-4ceacdde89c3
 
-### `automatic_block_inserter_supported_block_types`
+## 🛠️ Position control overview 
 
-This filter allows you to modify supported block types for the inserter.
+Here's a quick overview that will help you understand how the positions control works:
 
-#### Arguments
+1.   **Post Type**: Choose the type of content you want your block to be associated with (e.g., posts, pages).
+2.   **Location Type**: Select whether your block should be placed in a specific "post area" or next to a "block type."
+3.   **Position**: If you chose "post area," your block could be set to appear within the "post content." For "block type," you’ll get a search-able dropdown menu listing all the available blocks where you can add your new block.
+4.   **Location**: Decide if your block should appear **before** or **after** the selected position.
+5.   **Offset**: This option is available when you select "**block type**" as your location type. It allows you to specify how many blocks away your new block should be placed from the chosen anchor block.
 
-| Parameter     | Type       | Description                                                                                                     |
-| :------------ | :--------- | :-------------------------------------------------------------------------------------------------------------- |
-| `block_types` | `string[]` | List of block types that are supported in the plugin. It loads all the registered block from server by default. |
-
-#### Example
-
-Here is a quick example using the filter to modify the supported block types to exclude the core image block.
-
-```php
-add_filter( 'automatic_block_inserter_supported_block_types', function( $block_types ) {
-
-    $new_block_types = array_filter( $block_types, function( $block_type ) {
-      return $block_type !== 'core/image';
-    } );
-
-    return $new_block_types;
-
-}, 10, 3 );
-```
-
+   
 ## Changelog
+
+= **1.0.6**
+
+-   **Dev**: Bump freemius SDK.
 
 = **1.0.5**
 

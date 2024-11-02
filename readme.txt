@@ -1,11 +1,11 @@
 === Automatic Block Inserter ===
-Contributors: Small Plugins
+Contributors: Small Plugins, freemius
 Donate link: https://smallplugins.com/
 Tags: reusable, block
 Requires at least: 5.8.3
 Requires PHP: 5.7
-Tested up to: 6.6
-Stable tag: 1.0.5
+Tested up to: 6.7
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-1.0.6.html
 
@@ -29,6 +29,9 @@ Automatic Block Inserter is a powerful plugin that allows you to easily insert b
 3. You can insert anywhere using the intuitive position control.
 
 == Changelog ==
+
+= 1.0.6 =
+* Dev: Bump freemius SDK.
 
 = 1.0.5 =
 * Improve: New ui control to select/search available block types.
